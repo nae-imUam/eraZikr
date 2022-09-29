@@ -7,4 +7,6 @@ def Home(request):
     return render(request, 'ezikr/home.html')
 
 def Next(request):
-    return render(request, 'ezikr/base.html')
+    ndone = 50
+    
+    return render(request, 'ezikr/zikra.html')

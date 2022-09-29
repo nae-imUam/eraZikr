@@ -1,215 +1,86 @@
 {% extends 'ezikr/base.html' %}
 {% load static %}
 {% block head %}
-<style media="screen">
-
-
-  .mt-100{
-    margin-top: 200px;
-  }
-  .progress {
-    width: 150px;
-    height: 150px !important;
-    float: left;
-    line-height: 150px;
-    background: none;
-    margin: 20px;
-    box-shadow: none;
-    position: relative;
-  }
-  .progress:after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 12px solid #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .progress>span {
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    z-index: 1;
-  }
-  .progress .progress-left {
-    left: 0;
-  }
-  .progress .progress-bar {
-    width: 100%;
-    height: 100%;
-    background: none;
-    border-width: 12px;
-    border-style: solid;
-    position: absolute;
-    top: 0;
-  }
-  .progress .progress-left .progress-bar {
-    left: 100%;
-    border-top-right-radius: 80px;
-    border-bottom-right-radius: 80px;
-    border-left: 0;
-    -webkit-transform-origin: center left;
-    transform-origin: center left;
-  }
-  .progress .progress-right {
-    right: 0;
-  }
-  .progress .progress-right .progress-bar {
-    left: -100%;
-    border-top-left-radius: 80px;
-    border-bottom-left-radius: 80px;
-    border-right: 0;
-    -webkit-transform-origin: center right;
-    transform-origin: center right;
-    animation: loading-1 1.8s linear forwards;
-  }
-  .progress .progress-value {
-    width: 90%;
-    height: 90%;
-    border-radius: 50%;
-    background: #000;
-    font-size: 24px;
-    color: #fff;
-    line-height: 135px;
-    text-align: center;
-    position: absolute;
-    top: 5%;
-    left: 5%;
-  }
-  .progress.blue .progress-bar {
-    border-color: #049dff;
-  }
-  .progress.blue .progress-left .progress-bar {
-    animation: loading-2 1.5s linear forwards 1.8s;
-  }
-  .progress.yellow .progress-bar {
-    border-color: #fdba04;
-  }
-  .progress.yellow .progress-right .progress-bar {
-    animation: loading-3 1.8s linear forwards;
-  }
-  .progress.yellow .progress-left .progress-bar {
-    animation: none;
-  }
-  @keyframes loading-1 {
-    0% {
-      -webkit-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(180deg);
-      transform: rotate(180deg);
-    }
-  }
-  @keyframes loading-2 {
-    0% {
-      -webkit-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(144deg);
-      transform: rotate(144deg);
-    }
-  }
-  @keyframes loading-3 {
-    0% {
-      -webkit-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(135deg);
-      transform: rotate(135deg);
-    }
-
-
-  }
-  .card{
-    min-width:230px;
-    border-radius: 10px 10px;
-  }
-  .card-body {
-    height: 300px;
-    min-width:230px;
-  }
-  .card-footer {
-    height: 60px;
-    min-width:230px;
-    border-radius: 0px 0px 10px 10px;
-  }
-
-  .btn-cng {
-    height: 100px;
-    min-width:300px;
-    border-radius: 0px 0px 10px 10px;
-  }
-</style>
-{% endblock %}
-{% block content  %}
 <style>
-#courses_get_started_btn {
-text-decoration:none !important;
-background-color:#04AA6D;
-width:100%;
-border-bottom-left-radius:5px;
-border-bottom-right-radius:5px;
-padding-top:10px;
-padding-bottom:10px;
-font-family: 'Source Sans Pro', sans-serif;
+.card{
+  min-width:230px;
+  border-radius: 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.35);
 }
-#courses_get_started_btn:hover {
-background-color:#059862!important;
+.card-body {
+  height: 300px;
+  min-width:230px;
 }
+.card-footer {
+  height: 60px;
+  min-width:230px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.btn-cng {
+  height: 100px;
+  min-width:300px;
+  border-radius: 0px 0px 10px 10px;
+}
+.cimg{
+  height: 200px;
+  weight: 200px;
+  border: 2px solid #fff;
+}
+
 </style>
-
-
-    <div id="internalCourses" class="container bg-dark text-light" max-width="230px" height="360.5px">
-    <p style="font-size:18px;padding-left:2px;padding-right:2px;">Get certified<br>by completing<br><span id="courses_subject_text">a</span> course today!</p>
-    <a id="courses_subject_img_link" href="https://shop.w3schools.com/collections/course-catalog" target="_blank">
-    <div style="padding:0 20px 20px 20px">
-    <svg id="w3_cert_badge2" style="margin:auto;width:85%" data-name="w3_cert_badge2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><defs><style>.cls-1{fill:#04aa6b;}.cls-2{font-size:23px;}.cls-2,.cls-3,.cls-4{fill:#fff;}.cls-2,.cls-3{font-family:RobotoMono-Medium, Roboto Mono;font-weight:500;}.cls-3{font-size:20.08px;}</style></defs><circle class="cls-1" cx="150" cy="150" r="146.47" transform="translate(-62.13 150) rotate(-45)"></circle><text class="cls-2" transform="translate(93.54 63.89) rotate(-29.5)">w</text><text class="cls-2" transform="translate(107.13 56.35) rotate(-20.8)">3</text><text class="cls-2" transform="matrix(0.98, -0.21, 0.21, 0.98, 121.68, 50.97)">s</text><text class="cls-2" transform="translate(136.89 47.84) rotate(-3.47)">c</text><text class="cls-2" transform="translate(152.39 47.03) rotate(5.12)">h</text><text class="cls-2" transform="translate(167.85 48.54) rotate(13.72)">o</text><text class="cls-2" transform="translate(182.89 52.35) rotate(22.34)">o</text><text class="cls-2" transform="matrix(0.86, 0.52, -0.52, 0.86, 197.18, 58.36)">l</text><text class="cls-2" transform="matrix(0.77, 0.64, -0.64, 0.77, 210.4, 66.46)">s</text><text class="cls-3" transform="translate(35.51 186.66) rotate(69.37)"> </text><text class="cls-3" transform="matrix(0.47, 0.88, -0.88, 0.47, 41.27, 201.28)">C</text><text class="cls-3" transform="matrix(0.58, 0.81, -0.81, 0.58, 48.91, 215.03)">E</text><text class="cls-3" transform="matrix(0.67, 0.74, -0.74, 0.67, 58.13, 227.36)">R</text><text class="cls-3" transform="translate(69.16 238.92) rotate(39.44)">T</text><text class="cls-3" transform="matrix(0.85, 0.53, -0.53, 0.85, 81.47, 248.73)">I</text><text class="cls-3" transform="translate(94.94 256.83) rotate(24.36)">F</text><text class="cls-3" transform="translate(109.34 263.09) rotate(16.83)">I</text><text class="cls-3" transform="translate(124.46 267.41) rotate(9.34)">E</text><text class="cls-3" transform="translate(139.99 269.73) rotate(1.88)">D</text><text class="cls-3" transform="translate(155.7 270.01) rotate(-5.58)"> </text><text class="cls-3" transform="translate(171.32 268.24) rotate(-13.06)"> </text><text class="cls-2" transform="translate(187.55 266.81) rotate(-21.04)">.</text><text class="cls-3" transform="translate(203.27 257.7) rotate(-29.24)"> </text><text class="cls-3" transform="translate(216.84 249.83) rotate(-36.75)"> </text><text class="cls-3" transform="translate(229.26 240.26) rotate(-44.15)">2</text><text class="cls-3" transform="translate(240.39 229.13) rotate(-51.62)">0</text><text class="cls-3" transform="translate(249.97 216.63) rotate(-59.17)">2</text><text class="cls-3" transform="matrix(0.4, -0.92, 0.92, 0.4, 257.81, 203.04)">2</text><path class="cls-4" d="M196.64,136.31s3.53,3.8,8.5,3.8c3.9,0,6.75-2.37,6.75-5.59,0-4-3.64-5.81-8-5.81h-2.59l-1.53-3.48,6.86-8.13a34.07,34.07,0,0,1,2.7-2.85s-1.11,0-3.33,0H194.79v-5.86H217.7v4.28l-9.19,10.61c5.18.74,10.24,4.43,10.24,10.92s-4.85,12.3-13.19,12.3a17.36,17.36,0,0,1-12.41-5Z"></path><path class="cls-4" d="M152,144.24l30.24,53.86,14.94-26.61L168.6,120.63H135.36l-13.78,24.53-13.77-24.53H77.93l43.5,77.46.15-.28.16.28Z"></path></svg>
-    </div>
-
-    </a>
-    <a class="w3-btn" id="courses_get_started_btn" href="https://shop.w3schools.com/collections/course-catalog" target="_blank">Get started</a>
-    </div>
-
-<div class="container bg-light mt-5" >
-  <div class="row">
-    <div class="col mt-5 p-5">
-      <div class="container card d-flex justify-content-center" style="padding: 0px; max-width:230px; border-radius: 10px 10px;" height="360.5px">
-        <a href="#" style="text-decoration: none;">
-        <div class="card-body bg-dark text-light" style=" border-radius: 10px 10px 0 0;"><p style="font-size:14px;padding-left:2px;padding-right:2px;">Send <span style="font-size:20px">100 Salam</span> on Prophet Muhammad(PBUH)</p></div>
-        <div class="card-footer bg-success text-center text-light" style="font-family:Sofia; border-radius:0 0 10px 10px;">As-Salamu-Alaika-Ya-Rasulallah</div>
-        </a>
+{% endblock head %}
+{% block content %}
+<div class="container-fluid p-0">
+  <div class="container bg-success text-light text-center mt-1 pt-3" style="border:1px solid #ffffff;">
+    <p>Daily Durood-O-Salaam</p>
+  </div>
+  <div class="container bg-light pb-5 text-center" >
+    <div class="row">
+      <div class="col mt-3 p-1">
+        <div class="container card d-flex justify-content-center" style="padding: 0px; max-width:230px; border-radius: 10px 10px; font-family:sofia;" height="360.5px">
+          <a href="{% url 'next' %}" style="text-decoration: none; background:none;">
+          <div class="card-body bg-dark text-light" style=" border-radius: 10px 10px 0 0;">
+            <p style="font-size:14px;padding-left:2px;padding-right:2px;">Send <span style="font-size:22px">100 Salam</span> on Prophet Muhammad(PBUH)</p>
+            <img class="m-3 mt-1 rounded-circle cimg"  style="width:85%" src="{% static 'ezikr/images/yanabisalam.jpg' %}" alt="">
+          </div>
+          <div class="card-footer bg-success text-center text-light" style="font-family:Sofia; border-radius:0 0 10px 10px;">As-Salamu-Alaika-Ya-RasoolAllah</div>
+          </a>
+        </div>
+      </div>
+      <div class="col mt-3 p-1">
+        <div class="container card d-flex justify-content-center" style="padding: 0px; max-width:230px; border-radius: 10px 10px; font-family:sofia;" height="360.5px">
+          <a href="{% url 'next' %}" style="text-decoration: none; background:none;">
+          <div class="card-body bg-dark text-light" style=" border-radius: 10px 10px 0 0;">
+            <p style="font-size:14px;padding-left:2px;padding-right:2px;">Send <span style="font-size:22px">100 Durood</span> on Prophet Muhammad(PBUH)</p>
+            <img class="m-3 mt-1 rounded-circle cimg"  style="width:85%" src="{% static 'ezikr/images/drd1.jpg' %}" alt="">
+          </div>
+          <div class="card-footer bg-success text-center text-light" style="font-family:Sofia; border-radius:0 0 10px 10px;">Allahumma-Salli-Ala-Muhammadiyon-Wa...</div>
+          </a>
+        </div>
+      </div>
+      <div class="col mt-3 p-1">
+        <div class="container card d-flex justify-content-center" style="padding: 0px; max-width:230px; border-radius: 10px 10px; font-family:sofia;" height="360.5px">
+          <a href="{% url 'next' %}" style="text-decoration: none; background:none;">
+          <div class="card-body bg-dark text-light" style=" border-radius: 10px 10px 0 0;">
+            <p style="font-size:14px;padding-left:2px;padding-right:2px;">Say <span style="font-size:22px">100 LaBBaik</span> to Prophet Muhammad(PBUH)</p>
+            <img class="m-3 mt-1 rounded-circle cimg"  style="width:85%" src="{% static 'ezikr/images/LabbaikyaRasulallah.jpg' %}" alt="">
+          </div>
+          <div class="card-footer bg-success text-center text-light" style="font-family:Sofia; border-radius:0 0 10px 10px;">Labbaik-Ya-RasoolAllah, Labbaik...</div>
+          </a>
+        </div>
+      </div>
+      <div class="col mt-3 p-1">
+        <div class="container card d-flex justify-content-center" style="padding: 0px; max-width:230px; border-radius: 10px 10px; font-family:sofia;" height="360.5px">
+          <a href="{% url 'next' %}" style="text-decoration: none; background:none;">
+          <div class="card-body bg-dark text-light" style=" border-radius: 10px 10px 0 0;">
+            <p style="font-size:14px;padding-left:2px;padding-right:2px;">Say <span style="font-size:22px">100 times</span> Kalma-e-Tauheed La-Ilaha Illallah.</p>
+            <img class="m-3 mt-1 rounded-circle cimg"  style="width:85%" src="{% static 'ezikr/images/lailaha2.png' %}" alt="">
+          </div>
+          <div class="card-footer bg-success text-center text-light" style="font-family:Sofia; border-radius:0 0 10px 10px;">La-Ilaha-Illallaah Muhammadur-Rasoolullah</div>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="row">
-    <div class="col mt-5 p-5">
-      <div class="container card d-flex justify-content-center" style="padding: 0px; max-width:230px; border-radius: 10px 10px;" height="360.5px">
-        <a href="#" style="text-decoration: none;">
-        <div class="card-body bg-dark text-light" style=" border-radius: 10px 10px 0 0;"><p style="font-size:14px;padding-left:2px;padding-right:2px;">Send <span style="font-size:20px">100 Salam</span> on Prophet Muhammad(PBUH)</p></div>
-        <div class="card-footer bg-success text-center text-light" style="font-family:Sofia; border-radius:0 0 10px 10px;">As-Salamu-Alaika-Ya-Rasulallah</div>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col mt-5 p-5">
-      <div class="container card d-flex justify-content-center" style="padding: 0px; max-width:230px; border-radius: 10px 10px;" height="360.5px">
-        <a href="#" style="text-decoration: none;">
-        <div class="card-body bg-dark text-light" style=" border-radius: 10px 10px 0 0;"><p style="font-size:14px;padding-left:2px;padding-right:2px;">Send <span style="font-size:20px">100 Salam</span> on Prophet Muhammad(PBUH)</p></div>
-        <div class="card-footer bg-success text-center text-light" style="font-family:Sofia; border-radius:0 0 10px 10px;">As-Salamu-Alaika-Ya-Rasulallah</div>
-        </a>
-      </div>
-    </div>
-  </div>
 </div>
-
 {% endblock content %}

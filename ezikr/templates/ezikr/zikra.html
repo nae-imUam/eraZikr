@@ -1,0 +1,111 @@
+{% extends 'ezikr/base.html' %}
+{% block head %}
+<style media="screen">
+
+  }
+  .card{
+    min-width:250px;
+    border-radius: 10px 10px;
+  }
+  .card-header{
+    height:100px;
+    min-width:250px;
+  }
+  .card-body {
+    height: 250px;
+    min-width:250px;
+  }
+  .card-footer {
+    height: 100px;
+    min-width:250px;
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  .btn:focus {
+    background-color: transparent;
+  }
+  #pbar{
+    transition: width 3s;
+    transition-timing-function: linear;
+  }
+  button{
+    transition-duration: 0.3s;
+  }
+  button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  .inlineul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  .inlineul li {
+    display: inline-block;
+    font-size: 15px;
+    padding: 0.5px;
+  }
+
+
+</style>
+{% load static %}
+{% endblock head %}
+{% block content  %}
+<div class="container bg-dark mt-3 p-3" >
+  <div  class="container card d-flex justify-content-center border-success mt-2 mb-5" style="padding: 0px; max-width:250px; border-radius: 10px 10px;" height="400px">
+    <div class="card-header bg-light" style=" border-radius: 10px 10px 0 0;">
+      <div class="progress" id="transbar">
+        <div id="pbar" class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width:0%"></div>
+      </div>
+    </div>
+    <div class="card-body bg-light text-light" >
+      <ul id ="gstr" class="inlineul text-dark">
+        <li class="">AllaHumma</li>
+        <li class="">Salli-Ala</li>
+        <li class="">Muhammadiyon</li>
+        <li class="">Wo Ala</li>
+        <li class="">Alihi</li>
+        <li class="">Muhammadin</li>
+        <li class="">Kama Sallita</li>
+        <li class="">Ala Ibrahima</li>
+        <li class="">Wa Ala</li>
+        <li class="">Alihi</li>
+        <li class="">Ibrahim</li>
+        <li class="">In-naka</li>
+        <li class="">Hamidum</li>
+        <li class="">Majid.</li>
+        <li class="">AllaHumma</li>
+        <li class="">Barik-Ala</li>
+        <li class="">Muhammadiyon</li>
+        <li class="">Wo Ala</li>
+        <li class="">Alihi</li>
+        <li class="">Muhammadin</li>
+        <li class="">Kama Barakta</li>
+        <li class="">Ala Ibrahima</li>
+        <li class="">Wa Ala</li>
+        <li class="">Alihi</li>
+        <li class="">Ibrahim</li>
+        <li class="">In-naka</li>
+        <li class="">Hamidum</li>
+        <li class="">Majid.</li>
+      </ul>
+
+    </div>
+    <div class="card-footer bg-success text-center text-light" style="font-family:Sofia; border-radius:0 0 10px 10px;">
+      <div class="progress mb-3">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:80%">80</div>
+      </div>
+      <div class="container d-flex justify-content-between">
+        <button class="btn" type="button" name="button">back</button>
+        <button id="btn1" class="justify-content-center rounded-pill p-4 btn btn-success btn-outline-light" type="button" onclick="trns()"></button>
+        <button id="mode" class="btn" onclick="mode()">Fast</button>
+      </div>
+
+    </div>
+  </div>
+</div
+
+  <script src="{% static 'ezikr/js/js1.js' %}" charset="utf-8"></script>
+
+
+{% endblock content %}
