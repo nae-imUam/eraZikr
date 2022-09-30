@@ -1,12 +1,22 @@
 from django.shortcuts import render
-
+from .models import *
 # Create your views here.
-from django.http import HttpResponse
 
 def Home(request):
-    return render(request, 'ezikr/home.html')
+    tasks = Task.objects.all()
+    challanges = Challange.objects.all()
+    context = {
+        'tasks':tasks,
+        'challanges':challanges
+    }
+    return render(request, 'ezikr/home.html', context)
 
-def Next(request):
-    ndone = 50
-    
-    return render(request, 'ezikr/zikra.html')
+def Next(request, task_id):
+    task = Task.objects.get(id=task_id)
+    context = {
+        'task':task
+    }
+    return render(request, 'ezikr/zikra.html', context)
+
+def Certify(request):
+    return render(request, 'ezikr/certify.html')

@@ -1,0 +1,42 @@
+<ul id ="gstr" class="inlineul text-dark">
+  <li class="">AllaHumma</li>
+  <li class="">Salli-Ala</li>
+  <li class="">Muhammadiyon</li>
+  <li class="">Wo Ala</li>
+  <li class="">Alihi</li>
+  <li class="">Muhammadin</li>
+  <li class="">Kama Sallita</li>
+  <li class="">Ala Ibrahima</li>
+  <li class="">Wa Ala</li>
+  <li class="">Alihi</li>
+  <li class="">Ibrahim</li>
+  <li class="">In-naka</li>
+  <li class="">Hamidum</li>
+  <li class="">Majid.</li>
+  <li class="">AllaHumma</li>
+  <li class="">Barik-Ala</li>
+  <li class="">Muhammadiyon</li>
+  <li class="">Wo Ala</li>
+  <li class="">Alihi</li>
+  <li class="">Muhammadin</li>
+  <li class="">Kama Barakta</li>
+  <li class="">Ala Ibrahima</li>
+  <li class="">Wa Ala</li>
+  <li class="">Alihi</li>
+  <li class="">Ibrahim</li>
+  <li class="">In-naka</li>
+  <li class="">Hamidum</li>
+  <li class="">Majid.</li>
+</ul>
+
+.inlineul {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.inlineul li {
+  display: inline-block;
+  font-size: 15px;
+  padding: 0.5px;
+}

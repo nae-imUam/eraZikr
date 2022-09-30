@@ -39,7 +39,7 @@
     <div class="row">
       <div class="col mt-3 p-1">
         <div class="container card d-flex justify-content-center" style="padding: 0px; max-width:230px; border-radius: 10px 10px; font-family:sofia;" height="360.5px">
-          <a href="{% url 'next' %}" style="text-decoration: none; background:none;">
+          <a href="{% url 'next' 1 %}" style="text-decoration: none; background:none;">
           <div class="card-body bg-dark text-light" style=" border-radius: 10px 10px 0 0;">
             <p style="font-size:14px;padding-left:2px;padding-right:2px;">Send <span style="font-size:22px">100 Salam</span> on Prophet Muhammad(PBUH)</p>
             <img class="m-3 mt-1 rounded-circle cimg"  style="width:85%" src="{% static 'ezikr/images/yanabisalam.jpg' %}" alt="">
@@ -50,7 +50,7 @@
       </div>
       <div class="col mt-3 p-1">
         <div class="container card d-flex justify-content-center" style="padding: 0px; max-width:230px; border-radius: 10px 10px; font-family:sofia;" height="360.5px">
-          <a href="{% url 'next' %}" style="text-decoration: none; background:none;">
+          <a href="{% url 'next' 2 %}" style="text-decoration: none; background:none;">
           <div class="card-body bg-dark text-light" style=" border-radius: 10px 10px 0 0;">
             <p style="font-size:14px;padding-left:2px;padding-right:2px;">Send <span style="font-size:22px">100 Durood</span> on Prophet Muhammad(PBUH)</p>
             <img class="m-3 mt-1 rounded-circle cimg"  style="width:85%" src="{% static 'ezikr/images/drd1.jpg' %}" alt="">
@@ -61,7 +61,7 @@
       </div>
       <div class="col mt-3 p-1">
         <div class="container card d-flex justify-content-center" style="padding: 0px; max-width:230px; border-radius: 10px 10px; font-family:sofia;" height="360.5px">
-          <a href="{% url 'next' %}" style="text-decoration: none; background:none;">
+          <a href="{% url 'next' 3 %}" style="text-decoration: none; background:none;">
           <div class="card-body bg-dark text-light" style=" border-radius: 10px 10px 0 0;">
             <p style="font-size:14px;padding-left:2px;padding-right:2px;">Say <span style="font-size:22px">100 LaBBaik</span> to Prophet Muhammad(PBUH)</p>
             <img class="m-3 mt-1 rounded-circle cimg"  style="width:85%" src="{% static 'ezikr/images/LabbaikyaRasulallah.jpg' %}" alt="">
@@ -72,12 +72,32 @@
       </div>
       <div class="col mt-3 p-1">
         <div class="container card d-flex justify-content-center" style="padding: 0px; max-width:230px; border-radius: 10px 10px; font-family:sofia;" height="360.5px">
-          <a href="{% url 'next' %}" style="text-decoration: none; background:none;">
+          <a href="{% url 'next' 4 %}" style="text-decoration: none; background:none;">
           <div class="card-body bg-dark text-light" style=" border-radius: 10px 10px 0 0;">
             <p style="font-size:14px;padding-left:2px;padding-right:2px;">Say <span style="font-size:22px">100 times</span> Kalma-e-Tauheed La-Ilaha Illallah.</p>
             <img class="m-3 mt-1 rounded-circle cimg"  style="width:85%" src="{% static 'ezikr/images/lailaha2.png' %}" alt="">
           </div>
           <div class="card-footer bg-success text-center text-light" style="font-family:Sofia; border-radius:0 0 10px 10px;">La-Ilaha-Illallaah Muhammadur-Rasoolullah</div>
+          </a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="container-fluid p-0">
+  <div class="container bg-success text-light text-center mt-1 pt-3" style="border:1px solid #ffffff;">
+    <p>Challanging Task : </p>
+  </div>
+  <div class="container bg-light pb-5 text-center" >
+    <div class="row">
+      <div class="col mt-3 p-1">
+        <div class="container card d-flex justify-content-center" style="padding: 0px; max-width:230px; border-radius: 10px 10px; font-family:sofia;" height="360.5px">
+          <a href="{% url 'next' 5 %}" style="text-decoration: none; background:none;">
+          <div class="card-body bg-dark text-light" style=" border-radius: 10px 10px 0 0;">
+            <p style="font-size:14px;padding-left:2px;padding-right:2px;">Mustafa Jan-E-Rahmat Pe Lakho Salaam...</p>
+            <img class="m-3 mt-1 rounded-circle cimg"  style="width:85%" src="{% static 'ezikr/images/yanabisalam.jpg' %}" alt="">
+          </div>
+          <div class="card-footer bg-success text-center text-light" style="font-family:Sofia; border-radius:0 0 10px 10px;">As-Salamu-Alaika-Ya-RasoolAllah</div>
           </a>
         </div>
       </div>

@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.Home, name="home"),
-    path("next/", views.Next, name="next"),
+    path("<int:task_id>/", views.Next, name="next"),
+    path("certify/", views.Certify, name="certify"),
 ]
